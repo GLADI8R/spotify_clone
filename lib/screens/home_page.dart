@@ -6,8 +6,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: kBlack,
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          decoration: const BoxDecoration(
+            color: kBlack,
+          ),
+        ),
+      ),
     );
   }
 }
