@@ -9,3 +9,9 @@ const kLightGrey = Color(0xFFB3B3B3);
 
 const kHeadingTextStyle =
     TextStyle(color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold);
+
+const kCardTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 16.0,
+  fontWeight: FontWeight.bold,
+);
