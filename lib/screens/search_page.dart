@@ -66,6 +66,19 @@ class SearchPage extends StatelessWidget {
                   height: 15.0,
                 ),
                 Expanded(
+                  child: topGenreCard,
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                const Text(
+                  'Browse all',
+                  style: kCardTextStyle,
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                Expanded(
                   child: genreCard,
                 ),
               ],

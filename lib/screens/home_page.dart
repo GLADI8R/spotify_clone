@@ -14,15 +14,15 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(
-        gradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment(0.0000001, -0.5), // 10% of the width, so there are ten blinds.
-        colors: <Color>[
-          Color(0xff006400),
-          Color(0xff000000),
-          Color(0xff000000),
-          Color(0xff000000),
-
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment(0.0000001,
+                  -0.5), // 10% of the width, so there are ten blinds.
+              colors: <Color>[
+                Color(0xff006400),
+                Color(0xff000000),
+                Color(0xff000000),
+                Color(0xff000000),
               ],
             ),
           ),
@@ -30,7 +30,9 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(height: 100,),
+              SizedBox(
+                height: 100,
+              ),
               Row(
                 children: [
                   const Text(
@@ -52,33 +54,28 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               Container(
-                height: 500,
-                width: 200,
-                child: Table(
-                  children: [
-                    TableRow(
-                      children: <Widget>[
-                        HomePageCard1(cardtext: 'playlist1',),
-                        HomePageCard1(cardtext: 'playlist2',),
-                      ]
-                    ),
-                    TableRow(
-                        children: <Widget>[
-                          HomePageCard1(cardtext: 'playlist3'),
-                          HomePageCard1(cardtext: 'playlist4'),
-                        ]
-                    ),
-                    TableRow(
-                        children: <Widget>[
-                          HomePageCard1(cardtext: 'playlist5'),
-                          HomePageCard1(cardtext: 'playlist6'),
-                        ]
-                    )
-
-                  ],
-                )
-              )
-
+                  height: 500,
+                  width: 200,
+                  child: Table(
+                    children: [
+                      TableRow(children: <Widget>[
+                        HomePageCard1(
+                          cardtext: 'playlist1',
+                        ),
+                        HomePageCard1(
+                          cardtext: 'playlist2',
+                        ),
+                      ]),
+                      TableRow(children: <Widget>[
+                        HomePageCard1(cardtext: 'playlist3'),
+                        HomePageCard1(cardtext: 'playlist4'),
+                      ]),
+                      TableRow(children: <Widget>[
+                        HomePageCard1(cardtext: 'playlist5'),
+                        HomePageCard1(cardtext: 'playlist6'),
+                      ])
+                    ],
+                  ))
             ],
           ),
         ),
@@ -86,4 +83,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
