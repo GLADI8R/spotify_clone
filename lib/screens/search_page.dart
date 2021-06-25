@@ -65,9 +65,56 @@ class SearchPage extends StatelessWidget {
                 const SizedBox(
                   height: 15.0,
                 ),
-                Expanded(
-                  child: topGenreCard,
+                const Expanded(
+                  child: TopGenreCard(),
                 ),
+                // Expanded(
+                //   child: ListView.builder(
+                //     scrollDirection: Axis.vertical,
+                //     itemBuilder: (context, i) {
+                //       if (i == 0) {
+                //         return Column(
+                //             crossAxisAlignment: CrossAxisAlignment.start,
+                //             children: [
+                //               const Text(
+                //                 'Your top genres',
+                //                 style: kCardTextStyle,
+                //               ),
+                //               const SizedBox(
+                //                 height: 15.0,
+                //               ),
+                //             ]);
+                //       } else if (i == 1) {
+                //         return topGenreCard;
+                //       } else if (i == 2) {
+                //         return Column(
+                //           crossAxisAlignment: CrossAxisAlignment.start,
+                //           children: [
+                //             const SizedBox(
+                //               height: 15.0,
+                //             ),
+                //             const Text(
+                //               'Browse all',
+                //               style: kCardTextStyle,
+                //             ),
+                //             const SizedBox(
+                //               height: 15.0,
+                //             ),
+                //           ],
+                //         );
+                //       }
+                //       return genreCard;
+                //     },
+
+                //     // child: Row(
+                //     //   children: [
+                //     //     topGenreCard,
+                //     //     const Text('Browse all', style: kCardTextStyle),
+                //     //     genreCard,
+                //     //   ],
+                //     // ),
+                //   ),
+                // ),
                 const SizedBox(
                   height: 15.0,
                 ),
@@ -78,8 +125,8 @@ class SearchPage extends StatelessWidget {
                 const SizedBox(
                   height: 15.0,
                 ),
-                Expanded(
-                  child: genreCard,
+                const Expanded(
+                  child: AllGenreCard(),
                 ),
               ],
             ),
