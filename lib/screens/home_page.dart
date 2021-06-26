@@ -18,7 +18,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          children: [Container(
+          children: [
+            Container(
             decoration: const BoxDecoration(
           gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -30,17 +31,12 @@ class HomePage extends StatelessWidget {
             Color(0xff000000),
             Color(0xff000000),
             Color(0xff000000),
-
-
                 ],
               ),
             ),
-
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-
               children: [
-
                 SizedBox(height: 50,),
                 Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -59,11 +55,6 @@ class HomePage extends StatelessWidget {
                           color: Colors.white,
                           size: 30,
                         ),
-
-
-
-                    // const SizedBox(width: 110,),
-
                   ],
                 ),
                 Container(
@@ -72,48 +63,53 @@ class HomePage extends StatelessWidget {
                     children: [
                       TableRow(
                         children: <Widget>[
-                          HomePageCard1(cardtext: 'playldasg',),
-                          HomePageCard1(cardtext: 'playlist2',),
+                          HomePageCard1(cardtext: 'playldasg',imageAsset: 'assets/images/73775.png'),
+                          HomePageCard1(cardtext: 'playlist2',imageAsset: 'assets/images/73775.png'),
                         ]
                       ),
                       TableRow(
                           children: <Widget>[
-                            HomePageCard1(cardtext: 'playlist3'),
-                            HomePageCard1(cardtext: 'playlist4'),
+                            HomePageCard1(cardtext: 'playlist3',imageAsset: 'assets/images/73775.png'),
+                            HomePageCard1(cardtext: 'playlist4',imageAsset: 'assets/images/73775.png'),
                           ]
                       ),
                       TableRow(
                           children: <Widget>[
-                            HomePageCard1(cardtext: 'playlist5'),
-                            HomePageCard1(cardtext: 'playlist6'),
+                            HomePageCard1(cardtext: 'playlist5',imageAsset: 'assets/images/73775.png',),
+                            HomePageCard1(cardtext: 'playlist6',imageAsset: 'assets/images/73775.png'),
                           ]
                       )
-
                     ],
                   )
                 ),
-                Text(
-                  'Stories of hope from the second wave',
-                  style: kHeadingTextStyle,
-                  softWrap: true,
-                ),
-
+                Column(
+                  children: [
+                    Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Stories of hope from the second wave',
+                      style: kHeadingTextStyle,
+                      softWrap: true,
+                    ),
+                  ),
                 Container(
-                  height:screenheight*0.21 ,
+                  height:screenheight*0.25 ,
                   width: double.infinity,
 
                   margin: EdgeInsets.only(bottom: 20),
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo',),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
                     ],
                   ),
 
                 ),
+              ]
+            ),
 
                 Align(
                   alignment: Alignment.centerLeft,
@@ -124,17 +120,17 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height:screenheight*0.21 ,
+                  height:screenheight*0.25 ,
                   width: double.infinity,
 
                   margin: EdgeInsets.only(bottom: 20),
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
                     ],
                   ),
 
@@ -148,17 +144,17 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height:screenheight*0.21 ,
+                  height:screenheight*0.25 ,
                   width: double.infinity,
 
                   margin: EdgeInsets.only(bottom: 20),
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
-                      HomePageSquareCard(screenwidth: screenwidth),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
+                      HomePageSquareCard(imageAsset: 'assets/images/naruto.jpg',playlistText: 'hellllo'),
                     ],
                   ),
 

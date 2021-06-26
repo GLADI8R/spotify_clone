@@ -14,95 +14,98 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: const BoxDecoration(
-            color: kBlack,
+        decoration: const BoxDecoration(
+          color: kBlack,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 50.0,
+            left: 16.0,
+            right: 16.0,
+            bottom: 16.0,
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(
-              top: 50.0,
-              left: 16.0,
-              right: 16.0,
-              bottom: 16.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Search',
-                  style: kHeadingTextStyle,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Search',
+                style: kHeadingTextStyle,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              // ignore: todo
+              //TODO::-|>
+              //Replace textFiled with button widget to take it to new screen
+              const TextField(
+                style: TextStyle(
+                  color: kLightGrey,
+                  height: 1,
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
-                // ignore: todo
-                //TODO::-|>
-                //Replace textFiled with button widget to take it to new screen
-                const TextField(
-                  style: TextStyle(
-                    color: kLightGrey,
-                    height: 1,
-                  ),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.search_sharp),
-                    hintText: 'Artists, Songs or Podcasts',
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.search_sharp),
+                  hintText: 'Artists, Songs or Podcasts',
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.white,
                     ),
                   ),
                 ),
-                Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: 4,
-                    itemBuilder: (context, i) {
-                      if (i == 0) {
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(
-                              height: 15.0,
-                            ),
-                            const Text(
-                              'Your top genres',
-                              style: kCardTextStyle,
-                            ),
-                            const SizedBox(
-                              height: 15.0,
-                            ),
-                          ],
-                        );
-                      } else if (i == 1) {
-                        return topGenreCard;
-                      } else if (i == 2) {
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const SizedBox(
-                              height: 15.0,
-                            ),
-                            const Text(
-                              'Browse all',
-                              style: kCardTextStyle,
-                            ),
-                            const SizedBox(
-                              height: 15.0,
-                            ),
-                          ],
-                        );
-                      }
-                      return genreCard;
-                    },
-                  ),
-                ),
-              ],
+              ),
+
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: 4,
+                itemBuilder: (context, i) {
+                  if (i == 0) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 15.0,
+                        ),
+                        const Text(
+                          'Your top genres',
+                          style: kCardTextStyle,
+                        ),
+                        const SizedBox(
+                          height: 15.0,
+                        ),
+                      ],
+                    );
+                  } else if (i == 1) {
+                    return topGenreCard;
+                  } else if (i == 2) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 15.0,
+                        ),
+                        const Text(
+                          'Browse all',
+                          style: kCardTextStyle,
+                        ),
+                        const SizedBox(
+                          height: 15.0,
+                        ),
+                      ],
+                    );
+                  }
+                  return genreCard;
+                },
+              ),
             ),
-          ),
+          ],
+        )
+
         ),
+          ),
+
       ),
     );
   }
