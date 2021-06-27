@@ -25,7 +25,7 @@ class HomePageSquareCard extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: screenwidth*0.45,
+            height: screenwidth*0.43,
             child: AspectRatio(
             aspectRatio: 1/1,
             child: Container(
