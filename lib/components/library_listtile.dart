@@ -4,9 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/styles/constants.dart';
 
 class LibraryListTile extends StatelessWidget {
-  const LibraryListTile({ Key? key, required this.listTitle}) : super(key: key);
+  const LibraryListTile(
+      {Key? key, required this.listTitle, required this.listAuthor})
+      : super(key: key);
 
   final String listTitle;
+  final String listAuthor;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +25,27 @@ class LibraryListTile extends StatelessWidget {
           width: 16.0,
         ),
         Container(
-          child: Text(
-            listTitle,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 17.0,
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 19.0),
+                child: Text(
+                  listTitle,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 17.0,
+                  ),
+                ),
+              ),
+              Text(
+                listAuthor,
+                style: const TextStyle(
+                  color: kLightGrey,
+                  fontSize: 13.0,
+                ),
+              ),
+            ],
           ),
         ),
       ],
