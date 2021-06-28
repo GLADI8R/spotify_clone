@@ -102,12 +102,15 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      const Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'Stories of hope from the second wave',
-                          style: kHomeHeadingStyle,
-                          softWrap: true,
+                      const Padding(
+                        padding: EdgeInsets.only(left: 10.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Stories of hope from the second wave',
+                            style: kHomeHeadingStyle,
+                            softWrap: true,
+                          ),
                         ),
                       ),
                       Container(
@@ -135,12 +138,15 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Hits of yesterday and today',
-                      softWrap: true,
-                      style: kHomeHeadingStyle,
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Hits of yesterday and today',
+                        softWrap: true,
+                        style: kHomeHeadingStyle,
+                      ),
                     ),
                   ),
                   Container(
@@ -165,12 +171,15 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Hits of yesterday and today',
-                      softWrap: true,
-                      style: kHomeHeadingStyle,
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Hits of yesterday and today',
+                        softWrap: true,
+                        style: kHomeHeadingStyle,
+                      ),
                     ),
                   ),
                   Container(
