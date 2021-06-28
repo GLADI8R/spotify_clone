@@ -15,9 +15,10 @@ class GenreCard extends StatelessWidget {
     return Container(
       child: GestureDetector(
         onTap: () {
-          print('Card pressed');
+          Navigator.pushNamed(context, '/songslist');
         },
         child: Container(
+          margin: const EdgeInsets.all(7.0),
           height: 92.0,
           padding: const EdgeInsets.all(10.0),
           decoration: BoxDecoration(

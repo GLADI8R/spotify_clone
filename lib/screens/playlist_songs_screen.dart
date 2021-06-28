@@ -19,6 +19,9 @@ class _SongsListState extends State<SongsList> {
     'mnop',
     'qrst',
     'uvw',
+    'xyz',
+    'xyz',
+    'xyz',
     'xyz'
   ];
 
@@ -26,6 +29,7 @@ class _SongsListState extends State<SongsList> {
   Widget build(BuildContext context) {
 
     double screenheight = MediaQuery. of(context). size. height;
+    double screenwidth = MediaQuery. of(context). size. width;
 
     return Scaffold(
       backgroundColor: kBlack,
@@ -57,7 +61,7 @@ class _SongsListState extends State<SongsList> {
                           margin: EdgeInsets.all(15),
                           color: kBlack,
 
-                          height: screenheight/10,
+                          height: screenheight/15,
                           alignment: Alignment.centerLeft,
                           child: Row(
                             children: [
@@ -66,6 +70,7 @@ class _SongsListState extends State<SongsList> {
                               songs[index],
                               style: kCardTextStyle,
                             ),
+
                           ]
                           ),
                         );
