@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/navbar.dart';
+import 'package:spotify_clone/screens/playlist_songs_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: NavigationBar(),
+      routes: {
+        '/songslist': (context) => SongsList(),
+      },
     );
   }
 }
