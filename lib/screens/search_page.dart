@@ -30,10 +30,12 @@ class _MyHomePageState extends State<SearchPage> {
                 expandedHeight: 155.0,
                 floating: false,
                 pinned: true,
+                centerTitle: false,
                 backgroundColor: kBlack,
                 flexibleSpace: FlexibleSpaceBar(
                   title: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Flexible(child: Container(), flex: 2),
                       const Flexible(
