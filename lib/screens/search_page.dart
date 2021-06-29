@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:spotify_clone/styles/constants.dart';
 import 'package:spotify_clone/components/genre.dart';
 
@@ -30,30 +31,28 @@ class _MyHomePageState extends State<SearchPage> {
                 floating: false,
                 pinned: true,
                 backgroundColor: kBlack,
-                title: const Padding(
-                  padding:
-                      const EdgeInsets.only(top: 60.0, left: 16.0, right: 16.0),
-                  child: const Text(
-                    "Search",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0,
-                    ),
+                flexibleSpace: FlexibleSpaceBar(
+                  title: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Flexible(child: Container(), flex: 2),
+                      const Flexible(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 2.0),
+                          child: Text(
+                            'Search',
+                            style: kHeadingTextStyle,
+                          ),
+                        ),
+                        flex: 1,
+                      ),
+                      Flexible(
+                        child: Container(),
+                        flex: 1,
+                      ),
+                    ],
                   ),
                 ),
-                // flexibleSpace: const FlexibleSpaceBar(
-                //   title: Text(
-                //     "Search",
-                //     textAlign: TextAlign.left,
-                //     style: TextStyle(
-                //       color: Colors.white,
-                //       fontWeight: FontWeight.bold,
-                //       fontSize: 30.0,
-                //     ),
-                //   ),
-                // ),
                 bottom: PreferredSize(
                   preferredSize: const Size.fromHeight(30.0),
                   child: Container(
