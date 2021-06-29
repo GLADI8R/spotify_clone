@@ -6,10 +6,15 @@ import 'package:flutter/painting.dart';
 import 'package:spotify_clone/styles/constants.dart';
 import 'package:spotify_clone/components/genre.dart';
 
-// ignore: must_be_immutable
-class SearchPage extends StatelessWidget {
+class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);
 
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<SearchPage> {
+  final double heightOfFirstContainer = 100.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

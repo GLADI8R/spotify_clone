@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/styles/constants.dart';
+import 'package:spotify_clone/components/home_page_square_card.dart';
 
 
 
@@ -38,21 +39,27 @@ class _SongsListState extends State<SongsList> {
           slivers: [
             SliverAppBar(
               backgroundColor: kBlack,
-              leading: IconButton(
-                icon: Icon(Icons.chevron_left),
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-              ),
+
               pinned: true,
 
               expandedHeight: screenheight*0.4 ,
               flexibleSpace: FlexibleSpaceBar(
-                title: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Text('PlayList1',style: kCardTextStyle,)
+                title: Text('PlayList1',style: kCardTextStyle,),
+                background: Padding(
+                  padding: EdgeInsets.only(top: 20),
+                    child: HomePageSquareCard(imageAsset: 'assets/images/square.webp',playlistText: 'PLAYLIST1',))
+              ),
+              bottom: PreferredSize(
+                preferredSize: Size.fromHeight(25),
+                child: IconButton(
+                  icon: Icon(Icons.play_arrow,color: Colors.white,size: 50,),
+                  onPressed: (){
+
+                  },
+
+
                 ),
-              )
+              ),
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
