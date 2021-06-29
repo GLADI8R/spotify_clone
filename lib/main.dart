@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: NavigationBar(),
+      home: const NavigationBar(),
       routes: {
         '/songslist': (context) => SongsList(),
       },

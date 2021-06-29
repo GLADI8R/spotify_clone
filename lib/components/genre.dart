@@ -5,7 +5,7 @@ import 'package:spotify_clone/components/genre_card.dart';
 import 'package:spotify_clone/styles/constants.dart';
 
 Container topGenreCard = Container(
-  //margin: const EdgeInsets.only(right: 10.0, bottom: 20),
+  // margin: const EdgeInsets.only(right: 10.0, bottom: 5.0),
   child: Table(
     children: [
       const TableRow(

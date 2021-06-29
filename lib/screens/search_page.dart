@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unnecessary_const
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:spotify_clone/styles/constants.dart';
 import 'package:spotify_clone/components/genre.dart';
 
@@ -14,98 +15,130 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-        decoration: const BoxDecoration(
-          color: kBlack,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(
-            top: 50.0,
-            left: 16.0,
-            right: 16.0,
-            bottom: 16.0,
+          decoration: const BoxDecoration(
+            color: kBlack,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Search',
-                style: kHeadingTextStyle,
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              // ignore: todo
-              //TODO::-|>
-              //Replace textFiled with button widget to take it to new screen
-              const TextField(
-                style: TextStyle(
-                  color: kLightGrey,
-                  height: 1,
-                ),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.search_sharp),
-                  hintText: 'Artists, Songs or Podcasts',
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverAppBar(
+                expandedHeight: 155.0,
+                floating: false,
+                pinned: true,
+                backgroundColor: kBlack,
+                title: const Padding(
+                  padding:
+                      const EdgeInsets.only(top: 60.0, left: 16.0, right: 16.0),
+                  child: const Text(
+                    "Search",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
                       color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30.0,
+                    ),
+                  ),
+                ),
+                // flexibleSpace: const FlexibleSpaceBar(
+                //   title: Text(
+                //     "Search",
+                //     textAlign: TextAlign.left,
+                //     style: TextStyle(
+                //       color: Colors.white,
+                //       fontWeight: FontWeight.bold,
+                //       fontSize: 30.0,
+                //     ),
+                //   ),
+                // ),
+                bottom: PreferredSize(
+                  preferredSize: const Size.fromHeight(30.0),
+                  child: Container(
+                    margin: const EdgeInsets.only(left: 16.0, right: 16.0),
+                    height: 48.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        const Padding(
+                          padding: EdgeInsets.fromLTRB(10.0, 8.0, 10.0, 8.0),
+                          child: Icon(
+                            Icons.search,
+                            color: kLightGrey,
+                          ),
+                        ),
+                        const Text(
+                          'Artists, songs or podcasts',
+                          style: TextStyle(
+                            color: kLightGrey,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
               ),
-
-            Expanded(
-              child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                itemCount: 4,
-                itemBuilder: (context, i) {
-                  if (i == 0) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 15.0,
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, i) {
+                    if (i == 0) {
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(
+                              height: 15.0,
+                            ),
+                            const Text(
+                              'Your top genres',
+                              style: kCardTextStyle,
+                            ),
+                            const SizedBox(
+                              height: 15.0,
+                            ),
+                          ],
                         ),
-                        const Text(
-                          'Your top genres',
-                          style: kCardTextStyle,
+                      );
+                    } else if (i == 1) {
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                        child: topGenreCard,
+                      );
+                    } else if (i == 2) {
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(
+                              height: 15.0,
+                            ),
+                            const Text(
+                              'Browse all',
+                              style: kCardTextStyle,
+                            ),
+                            const SizedBox(
+                              height: 15.0,
+                            ),
+                          ],
                         ),
-                        const SizedBox(
-                          height: 15.0,
-                        ),
-                      ],
+                      );
+                    }
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                      child: genreCard,
                     );
-                  } else if (i == 1) {
-                    return topGenreCard;
-                  } else if (i == 2) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 15.0,
-                        ),
-                        const Text(
-                          'Browse all',
-                          style: kCardTextStyle,
-                        ),
-                        const SizedBox(
-                          height: 15.0,
-                        ),
-                      ],
-                    );
-                  }
-                  return genreCard;
-                },
-              ),
-            ),
-          ],
-        )
-
-        ),
+                  },
+                  childCount: 4,
+                ),
+              )
+            ],
           ),
-
+        ),
       ),
     );
   }
