@@ -23,6 +23,7 @@ class HomePageSquareCard extends StatelessWidget {
         Navigator.pushNamed(context, '/songslist');
       },
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             height: screenwidth*0.43,
@@ -39,7 +40,11 @@ class HomePageSquareCard extends StatelessWidget {
             ),
         ),
           ),
-          Text(playlistText,style: kCardTextStyle,)
+             Padding(
+                 child: Text(playlistText,style: kCardTextStyle,textAlign: TextAlign.left,),
+               padding: EdgeInsets.only(left: 10),
+             ),
+
       ]
       ),
     );

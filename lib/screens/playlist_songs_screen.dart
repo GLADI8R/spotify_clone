@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/styles/constants.dart';
 import 'package:spotify_clone/components/home_page_square_card.dart';
@@ -39,28 +40,35 @@ class _SongsListState extends State<SongsList> {
           slivers: [
             SliverAppBar(
               backgroundColor: kBlack,
-
               pinned: true,
-
+              centerTitle: true,
               expandedHeight: screenheight*0.4 ,
-              flexibleSpace: FlexibleSpaceBar(
-                title: Text('PlayList1',style: kCardTextStyle,),
-                background: Padding(
-                  padding: EdgeInsets.only(top: 20),
-                    child: HomePageSquareCard(imageAsset: 'assets/images/square.webp',playlistText: 'PLAYLIST1',))
-              ),
-              bottom: PreferredSize(
-                preferredSize: Size.fromHeight(25),
-                child: IconButton(
-                  icon: Icon(Icons.play_arrow,color: Colors.white,size: 50,),
-                  onPressed: (){
-
-                  },
-
-
+              flexibleSpace: Stack(
+                overflow: Overflow.visible ,
+                alignment: Alignment.bottomCenter,
+                children: [
+                  FlexibleSpaceBar(
+                  title: Text('PlayList1',style: kCardTextStyle,),
+                  background: Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Image.asset('assets/images/square.webp',))
                 ),
+                  Positioned(
+                    bottom: -30,
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: kGreen,
+                      child: IconButton(
+                        icon: Icon(Icons.play_arrow,color: Colors.white,size: 30,),
+                        onPressed: (){
+                        },
+                      ),
+                    ),
+                  )
+        ]
               ),
-            ),
+                ),
+
             SliverList(
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
