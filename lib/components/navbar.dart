@@ -36,48 +36,53 @@ class _NavigationBarState extends State<NavigationBar> {
       persistentFooterButtons: [
         Container(
           height: 45.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/images/square.webp',
-                height: 50.0,
-              ),
-              const SizedBox(width: 10.0),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Song Name',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14.0),
-                  ),
-                  const Text(
-                    'Artist',
-                    style: TextStyle(color: kLightGrey, fontSize: 10.0),
-                  ),
-                  // const Divider(color: Colors.black),
-                ],
-              ),
-              const Spacer(),
-              const Icon(
-                Icons.favorite_border,
-                color: Colors.white,
-                size: 30.0,
-              ),
-              const SizedBox(
-                width: 10.0,
-              ),
-              const Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 30.0,
-              ),
-            ],
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/player');
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/square.webp',
+                  height: 50.0,
+                ),
+                const SizedBox(width: 10.0),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Song Name',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0),
+                    ),
+                    const Text(
+                      'Artist',
+                      style: TextStyle(color: kLightGrey, fontSize: 10.0),
+                    ),
+                    // const Divider(color: Colors.black),
+                  ],
+                ),
+                const Spacer(),
+                const Icon(
+                  Icons.favorite_border,
+                  color: Colors.white,
+                  size: 30.0,
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                const Icon(
+                  Icons.play_arrow,
+                  color: Colors.white,
+                  size: 30.0,
+                ),
+              ],
+            ),
           ),
         )
       ],

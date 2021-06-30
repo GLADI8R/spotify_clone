@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/navbar.dart';
+import 'package:spotify_clone/screens/player_screen.dart';
 import 'package:spotify_clone/screens/playlist_songs_screen.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       home: const NavigationBar(),
       routes: {
         '/songslist': (context) => SongsList(),
+        '/player': (context) => const MusicPlayer(),
       },
     );
   }
