@@ -27,6 +27,19 @@ class _SongsListState extends State<SongsList> {
     'xyz'
   ];
 
+  List<String> artist= [
+    'abcd',
+    'efgh',
+    'ijkl',
+    'mnop',
+    'qrst',
+    'uvw',
+    'xyz',
+    'xyz',
+    'xyz',
+    'xyz'
+  ];
+
   @override
   Widget build(BuildContext context) {
 
@@ -42,16 +55,30 @@ class _SongsListState extends State<SongsList> {
               backgroundColor: kBlack,
               pinned: true,
               centerTitle: true,
-              expandedHeight: screenheight*0.4 ,
+              expandedHeight: screenheight*0.45 ,
               flexibleSpace: Stack(
                 overflow: Overflow.visible ,
                 alignment: Alignment.bottomCenter,
                 children: [
                   FlexibleSpaceBar(
                   title: Text('PlayList1',style: kCardTextStyle,),
-                  background: Padding(
-                    padding: EdgeInsets.only(top: 20),
-                    child: Image.asset('assets/images/square.webp',))
+                  background: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          kGreen,
+                          kBlack,
+                          kBlack,
+                        ]
+                      )
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 40,right: 80,left: 80,bottom: 80),
+                      child: Image.asset('assets/images/gaming.jpeg',),
+                    ),
+                  )
                 ),
                   Positioned(
                     bottom: -30,
@@ -80,11 +107,32 @@ class _SongsListState extends State<SongsList> {
                           alignment: Alignment.centerLeft,
                           child: Row(
                             children: [
-                              Image.asset('assets/images/square.webp'),
-                              Text(
-                              songs[index],
-                              style: kCardTextStyle,
-                            ),
+                              Image.asset('assets/images/$index.jpeg'),
+                              SizedBox(width: 10,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                    Text(
+                                      songs[index],
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+
+                                      ),
+                                    ),
+
+                                    Text(
+                                      songs[index],
+                                      style: TextStyle(
+                                        color: Colors.white38,
+                                        fontSize: 15
+                                      ),
+                                    )
+
+                                ],
+                              )
+
 
                           ]
                           ),

@@ -15,11 +15,13 @@ class LibraryListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(
-          'assets/images/73775.png',
-          height: 70.0,
-          width: 70.0,
-          color: kGrey,
+        ClipRRect(
+          child: Image.asset(
+            'assets/images/1.jpeg',
+            height: 70.0,
+            width: 70.0,
+            color: kGrey,
+          ),
         ),
         const SizedBox(
           width: 16.0,

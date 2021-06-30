@@ -34,12 +34,16 @@ class HomePageSquareCard extends StatelessWidget {
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Colors.white
+                  color: Colors.white,
               ),
-              child: Image.asset(imageAsset),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: Image.asset(imageAsset),
+              ),
             ),
         ),
           ),
+
              Padding(
                  child: Text(playlistText,style: kCardTextStyle,textAlign: TextAlign.left,),
                padding: EdgeInsets.only(left: 10),

@@ -72,29 +72,29 @@ class HomePage extends StatelessWidget {
                       children: [
                         TableRow(children: <Widget>[
                           HomePageCard1(
-                              cardtext: 'playldasg',
-                              imageAsset: 'assets/images/73775.png'),
+                              cardtext: 'Bollywood Blast',
+                              imageAsset: 'assets/images/bollyblast.jpeg'),
                           HomePageCard1(
-                              cardtext: 'playlist2',
-                              imageAsset: 'assets/images/73775.png'),
+                              cardtext: 'Desi Hits',
+                              imageAsset: 'assets/images/desihits.jpeg'),
                         ]),
                         TableRow(children: <Widget>[
                           HomePageCard1(
-                              cardtext: 'playlist3',
-                              imageAsset: 'assets/images/73775.png'),
+                              cardtext: 'Rehman Special',
+                              imageAsset: 'assets/images/rehman.jpeg'),
                           HomePageCard1(
-                              cardtext: 'playlist4',
-                              imageAsset: 'assets/images/73775.png'),
+                              cardtext: 'Gaming',
+                              imageAsset: 'assets/images/gaming.jpeg'),
                         ]),
                         TableRow(
                           children: <Widget>[
                             HomePageCard1(
-                              cardtext: 'playlist5',
-                              imageAsset: 'assets/images/73775.png',
+                              cardtext: 'All Out 10s',
+                              imageAsset: 'assets/images/allout10.jpeg',
                             ),
                             HomePageCard1(
-                                cardtext: 'playlist6',
-                                imageAsset: 'assets/images/73775.png'),
+                                cardtext: 'Comfort',
+                                imageAsset: 'assets/images/comfort.jpeg'),
                           ],
                         )
                       ],
@@ -121,18 +121,18 @@ class HomePage extends StatelessWidget {
                           scrollDirection: Axis.horizontal,
                           children: [
                             HomePageSquareCard(
-                              imageAsset: 'assets/images/naruto.jpg',
-                              playlistText: 'hellllo',
+                              imageAsset: 'assets/images/dailymix.jpeg',
+                              playlistText: 'Daily Mix 3',
                             ),
                             HomePageSquareCard(
-                                imageAsset: 'assets/images/naruto.jpg',
-                                playlistText: 'hellllo'),
+                                imageAsset: 'assets/images/allout10.jpeg',
+                                playlistText: 'All Out 10s'),
                             HomePageSquareCard(
-                                imageAsset: 'assets/images/naruto.jpg',
-                                playlistText: 'hellllo'),
+                                imageAsset: 'assets/images/gaming.jpeg',
+                                playlistText: 'Top Gaming Tracks'),
                             HomePageSquareCard(
-                                imageAsset: 'assets/images/naruto.jpg',
-                                playlistText: 'hellllo'),
+                                imageAsset: 'assets/images/weekly.jpeg',
+                                playlistText: 'Discover Weekly'),
                           ],
                         ),
                       ),
@@ -143,7 +143,7 @@ class HomePage extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Hits of yesterday and today',
+                        'Bollywood Hits',
                         softWrap: true,
                         style: kHomeHeadingStyle,
                       ),
@@ -157,17 +157,17 @@ class HomePage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/bollyblast.jpeg',
+                            playlistText: 'Bollywood Blast'),
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/desihits.jpeg',
+                            playlistText: 'Desi Hits'),
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/rehman.jpeg',
+                            playlistText: 'Rehman Ruling 90s'),
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/gaming.jpeg',
+                            playlistText: 'Top Gaming Tracks'),
                       ],
                     ),
                   ),
@@ -190,17 +190,18 @@ class HomePage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: [
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                          imageAsset: 'assets/images/dailymix.jpeg',
+                          playlistText: 'Daily Mix 3',
+                        ),
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/allout10.jpeg',
+                            playlistText: 'All Out 10s'),
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/gaming.jpeg',
+                            playlistText: 'Gaming'),
                         HomePageSquareCard(
-                            imageAsset: 'assets/images/naruto.jpg',
-                            playlistText: 'hellllo'),
+                            imageAsset: 'assets/images/weekly.jpeg',
+                            playlistText: 'Discover Weekly'),
                       ],
                     ),
                   ),
