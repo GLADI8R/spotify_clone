@@ -24,7 +24,6 @@ class LibraryListTile extends StatelessWidget {
             listImage,
             height: 70.0,
             width: 70.0,
-            // color: kGrey,
           ),
         ),
         const SizedBox(

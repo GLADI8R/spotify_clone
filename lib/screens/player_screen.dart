@@ -166,7 +166,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                       Icon(Icons.repeat, color: Colors.white, size: 20.0),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

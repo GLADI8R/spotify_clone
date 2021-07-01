@@ -105,9 +105,6 @@ class _NavigationBarState extends State<NavigationBar> {
               icon: Icon(Icons.list),
               label: 'Library',
             ),
-            // BottomNavigationBarItem(
-            //   icon: Icon(Premium icon)
-            // ),
           ],
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.white,
