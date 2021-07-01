@@ -4,6 +4,7 @@ import 'package:spotify_clone/components/navbar.dart';
 import 'package:spotify_clone/styles/constants.dart';
 import 'package:splashscreen/splashscreen.dart';
 
+
 class SplashScreenSpotify extends StatelessWidget {
   const SplashScreenSpotify({Key? key}) : super(key: key);
 

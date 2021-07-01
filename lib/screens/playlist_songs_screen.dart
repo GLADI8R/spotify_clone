@@ -11,29 +11,29 @@ class SongsList extends StatefulWidget {
 
 class _SongsListState extends State<SongsList> {
   List<String> songs = [
-    'abcd',
-    'efgh',
-    'ijkl',
-    'mnop',
-    'qrst',
-    'uvw',
-    'xyz',
-    'xyz',
-    'xyz',
-    'xyz'
+    'Perfect',
+    'Never Enough',
+    "'Could'nt Be Better",
+    'Em Calls Paul',
+    "Till It's gone",
+    'Black Sheep',
+    'Lighters',
+    'The Way I Am',
+    'Wonder',
+    'Lifestyle'
   ];
 
   List<String> artist = [
-    'abcd',
-    'efgh',
-    'ijkl',
-    'mnop',
-    'qrst',
-    'uvw',
-    'xyz',
-    'xyz',
-    'xyz',
-    'xyz'
+    'Ed Sheeran',
+    'Loren Allred',
+    'Kelly Clarkson,Ugly Dolls Cast',
+    'Eminem',
+    'YelaWolf',
+    'YelaWolf',
+    'Bad Meets Evil',
+    'Eminem',
+    'Shawn Mendes',
+    'Jason Derulo, Adam Levine, Maroon 5'
   ];
 
   @override
@@ -125,7 +125,7 @@ class _SongsListState extends State<SongsList> {
                               ),
                             ),
                             Text(
-                              songs[index],
+                              artist[index],
                               style: const TextStyle(
                                   color: Colors.white38, fontSize: 15),
                             ),

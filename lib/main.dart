@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/player': (context) => const MusicPlayer(),
         '/nav': (context) => const NavigationBar(),
         '/splashscreen': (context) => const SplashScreenSpotify()
+
       },
     );
   }

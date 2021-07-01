@@ -31,7 +31,7 @@ class HomePageSquareCard extends StatelessWidget {
                 margin: const EdgeInsets.all(10),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Colors.white,
+                  color: kBlack,
                 ),
                 child: ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(10)),
