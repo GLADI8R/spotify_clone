@@ -12,7 +12,7 @@ class SplashScreenSpotify extends StatelessWidget {
     return SplashScreen(
       seconds: 6,
       navigateAfterSeconds: const NavigationBar(),
-      image: Image.asset('assets/images/spotifypng.png'),
+      image: Image.asset('assets/images/spotify.png'),
       photoSize: 100.0,
       backgroundColor: kBlack,
       loaderColor: kBlack,
