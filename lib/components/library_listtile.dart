@@ -5,11 +5,15 @@ import 'package:spotify_clone/styles/constants.dart';
 
 class LibraryListTile extends StatelessWidget {
   const LibraryListTile(
-      {Key? key, required this.listTitle, required this.listAuthor})
+      {Key? key,
+      required this.listTitle,
+      required this.listAuthor,
+      required this.listImage})
       : super(key: key);
 
   final String listTitle;
   final String listAuthor;
+  final String listImage;
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +21,10 @@ class LibraryListTile extends StatelessWidget {
       children: [
         ClipRRect(
           child: Image.asset(
-            'assets/images/1.jpeg',
+            listImage,
             height: 70.0,
             width: 70.0,
-            color: kGrey,
+            // color: kGrey,
           ),
         ),
         const SizedBox(

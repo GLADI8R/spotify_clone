@@ -107,7 +107,7 @@ class HomePage extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            'Stories of hope from the second wave',
+                            'Recently played',
                             style: kHomeHeadingStyle,
                             softWrap: true,
                           ),
@@ -116,21 +116,21 @@ class HomePage extends StatelessWidget {
                       Container(
                         height: screenheight * 0.25,
                         width: double.infinity,
-                        margin: EdgeInsets.only(bottom: 20),
+                        margin: const EdgeInsets.only(bottom: 20),
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: [
-                            HomePageSquareCard(
+                            const HomePageSquareCard(
                               imageAsset: 'assets/images/dailymix.jpeg',
                               playlistText: 'Daily Mix 3',
                             ),
-                            HomePageSquareCard(
+                            const HomePageSquareCard(
                                 imageAsset: 'assets/images/allout10.jpeg',
                                 playlistText: 'All Out 10s'),
-                            HomePageSquareCard(
+                            const HomePageSquareCard(
                                 imageAsset: 'assets/images/gaming.jpeg',
                                 playlistText: 'Top Gaming Tracks'),
-                            HomePageSquareCard(
+                            const HomePageSquareCard(
                                 imageAsset: 'assets/images/weekly.jpeg',
                                 playlistText: 'Discover Weekly'),
                           ],
@@ -152,20 +152,20 @@ class HomePage extends StatelessWidget {
                   Container(
                     height: screenheight * 0.25,
                     width: double.infinity,
-                    margin: EdgeInsets.only(bottom: 20),
+                    margin: const EdgeInsets.only(bottom: 20),
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/bollyblast.jpeg',
                             playlistText: 'Bollywood Blast'),
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/desihits.jpeg',
                             playlistText: 'Desi Hits'),
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/rehman.jpeg',
                             playlistText: 'Rehman Ruling 90s'),
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/gaming.jpeg',
                             playlistText: 'Top Gaming Tracks'),
                       ],
@@ -185,21 +185,21 @@ class HomePage extends StatelessWidget {
                   Container(
                     height: screenheight * 0.25,
                     width: double.infinity,
-                    margin: EdgeInsets.only(bottom: 20),
+                    margin: const EdgeInsets.only(bottom: 20),
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                           imageAsset: 'assets/images/dailymix.jpeg',
                           playlistText: 'Daily Mix 3',
                         ),
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/allout10.jpeg',
                             playlistText: 'All Out 10s'),
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/gaming.jpeg',
                             playlistText: 'Gaming'),
-                        HomePageSquareCard(
+                        const HomePageSquareCard(
                             imageAsset: 'assets/images/weekly.jpeg',
                             playlistText: 'Discover Weekly'),
                       ],

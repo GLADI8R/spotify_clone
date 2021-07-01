@@ -34,7 +34,7 @@ class HomePageCard1 extends StatelessWidget {
             Container(
                 child: Text(
                   cardtext,
-                  style: kCardTextStyle,
+                  style: kCardStyle,
                   softWrap: true,
                   textAlign: TextAlign.left,
                 ),

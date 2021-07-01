@@ -45,7 +45,7 @@ class _NavigationBarState extends State<NavigationBar> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/square.webp',
+                  'assets/images/TooFarGone.jpeg',
                   height: 50.0,
                 ),
                 const SizedBox(width: 10.0),
@@ -54,14 +54,14 @@ class _NavigationBarState extends State<NavigationBar> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Song Name',
+                      'Too Far Gone',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                           fontSize: 14.0),
                     ),
                     const Text(
-                      'Artist',
+                      'cloverscars',
                       style: TextStyle(color: kLightGrey, fontSize: 10.0),
                     ),
                     // const Divider(color: Colors.black),

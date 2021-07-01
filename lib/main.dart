@@ -17,12 +17,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const NavigationBar(),
-      initialRoute: '/splashscreen' ,
+      initialRoute: '/splashscreen',
       routes: {
         '/songslist': (context) => SongsList(),
         '/player': (context) => const MusicPlayer(),
-        '/homescreen' : (context) => const HomePage(),
-        '/splashscreen': (context) =>  SplashScreen()
+        '/nav': (context) => const NavigationBar(),
+        '/splashscreen': (context) => SplashScreen()
       },
     );
   }

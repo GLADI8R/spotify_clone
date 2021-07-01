@@ -11,9 +11,25 @@ GridView libraryList = GridView.count(
   shrinkWrap: true,
   childAspectRatio: (1 / 0.2),
   children: [
-    const LibraryListTile(listTitle: 'Liked Songs', listAuthor: 'Spotify'),
-    const LibraryListTile(listTitle: 'All Out of 10s', listAuthor: 'Spotify'),
-    const LibraryListTile(listTitle: 'My Playlist', listAuthor: 'User'),
-    const LibraryListTile(listTitle: 'Electronic', listAuthor: 'Spotify'),
+    const LibraryListTile(
+      listTitle: 'Liked Songs',
+      listAuthor: 'Spotify',
+      listImage: 'assets/images/1.jpeg',
+    ),
+    const LibraryListTile(
+      listTitle: 'All Out of 10s',
+      listAuthor: 'Spotify',
+      listImage: 'assets/images/allout10.jpeg',
+    ),
+    const LibraryListTile(
+      listTitle: 'My Playlist',
+      listAuthor: 'User',
+      listImage: 'assets/images/3.jpeg',
+    ),
+    const LibraryListTile(
+      listTitle: 'Electronic',
+      listAuthor: 'Spotify',
+      listImage: 'assets/images/4.jpeg',
+    ),
   ],
 );

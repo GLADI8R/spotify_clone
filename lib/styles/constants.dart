@@ -19,3 +19,5 @@ const kCardTextStyle = TextStyle(
   fontSize: 16.0,
   fontWeight: FontWeight.bold,
 );
+
+const kCardStyle = TextStyle(color: Colors.white, fontSize: 14.0);
